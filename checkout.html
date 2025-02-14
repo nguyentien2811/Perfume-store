@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfume | E-Commerce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-dsfouBk+RN8OwqWOA+v7cT57+zxMMbLbQIyDnRN6yS6euUtyRL6+z8wHuNal8VT8P9akXrU+2Om5cBz0Vle6ew==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_checkout.css">
+</head>
+
+<body>
+    <div class="off_canvars_overlay"></div>
+
+    <div class="offcanvas_menu offcanvas_two">
+        <div class="canvas_open">
+            <a href="javascript:void(0)"><i class="fa fa-bars"></i></a>
+        </div>
+        <div class="offcanvas_menu_wrapper">
+            <div class="canvas_close">
+                <a href="javascript:void(0)"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="header_account">
+                <ul>
+                    <li class="language">
+                        <a href="#"><img src="images/icon/vietnamese.jpg" alt="English"> VN <i
+                                class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown_language">
+                            <li><a href="#">Tiếng Việt</a></li>
+                            <li><a href="#">English</a></li>
+                            <li><a href="#">Korean</a></li>
+                        </ul>
+                    </li>
+                    <li class="currency">
+                        <a href="#">Chuyển đổi <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown_currency">
+                            <li><a href="#">VND - Việt Nam Đồng</a></li>
+                            <li><a href="#">USD - US Dollar</a></li>
+                            <li><a href="#">WON - South Korean Won</a></li>
+                        </ul>
+                    </li>
+                    <li class="top_links">
+                        <a href="#">My Account <i class="fa fa-angle-down"></i></a>
+                        <ul class="dropdown_links">
+                            <li><a href="#">Thanh Toán</a></li>
+                            <li><a href="#">Tài Khoản</a></li>
+                            <li><a href="#">Giỏ Hàng</a></li>
+                            <li><a href="#">Yêu Thích</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="header_right_info">
+                <ul>
+                    <li class="search_box">
+                        <a href="products.html"><i class="fa fa-search"></i></a>
+                        <div class="search_widget">
+                            <form action="#">
+                                <input type="text" placeholder="Search Your Perfume">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </form>
+                        </div>
+                    </li>
+                    <li class="header_wishlist">
+                        <a href="#"><i class="fa fa-heart-o" id="wishlist-icon" data-quantity-wishlist="0"></i>
+                            <span id="cart-quantity" class="item_count">0</span>
+                        </a>
+                    </li>
+                    <li class="mini_cart_wrapper">
+                        <a href="cart.html">
+                            <i class="fa fa-shopping-cart" id="cart-icon" data-quantity-cart="0"></i>
+                            <span id="cart-quantity" class="item_count">0</span>
+                        </a>
+                        <div class="mini_cart mini_cart2">
+                            <div class="cart_gallery">
+                                <div class="cart_item">
+                                    <div class="cart_img">
+                                        <a href="#"><img src="#" alt="Perfume"></a>
+                                    </div>
+                                    <div class="cart_info">
+                                        <a href="#"></a>
+                                        <p><span></span> </p>
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a href="#"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                                <div class="cart_item">
+                                    <div class="cart_img">
+                                        <a href="#"><img src="" alt="Perfume"></a>
+                                    </div>
+                                    <div class="cart_info">
+                                        <a href="#"></a>
+                                        <p><span></span></p>
+                                    </div>
+                                    <div class="cart_remove">
+                                        <a href="#"><i class="fa fa-times"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mini_cart_table">
+                                <div class="cart_table_border">
+                                    <div class="cart_total">
+                                        <span>Sub Total :</span>
+                                        <span class="price"></span>
+                                    </div>
+
+                                    <div class="cart_total mt-10">
+                                        <span>Total :</span>
+                                        <span class="price"></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="mini_cart_footer">
+                                <div class="cart_button">
+                                    <a href="cart.html">Xem Giỏ Hàng</a>
+                                </div>
+                                <div class="cart_button">
+                                    <a href="#">Thanh Toán</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- mini cart ends here -->
+                    </li>
+                </ul>
+            </div>
+
+            <div id="menu" class="text-left">
+                <ul class="offcanvas_main_menu">
+                    <li class="menu-item-has-children active">
+                        <a href="#">Trang Chủ</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Nam</a></li>
+                            <li><a href="#">Nữ</a></li>
+                            <li><a href="#">Unisex</a></li>
+                            <li><a href="#">Trẻ Em</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Brands</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item-has-children">
+                                <a href="#">Nam</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Versace</a></li>
+                                    <li><a href="#">Hugo Boss</a></li>
+                                    <li><a href="#">Jaguar</a></li>
+                                    <li><a href="#">Armani</a></li>
+                                    <li><a href="#">Paco Rabbane</a></li>
+                                    <li><a href="#">Ralph Lauren</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Nữ</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Bvlgari</a></li>
+                                    <li><a href="#">Coach</a></li>
+                                    <li><a href="#">Kenzo</a></li>
+                                    <li><a href="#">D&G</a></li>
+                                    <li><a href="#">Jean Paul Gaultier</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item-has-children">
+                                <a href="#">Unisex</a>
+                                <ul class="sub-menu">
+                                    <li><a href="#">Ajmal</a></li>
+                                    <li><a href="#">Calvin Klein</a></li>
+                                    <li><a href="#">The Body Shop</a></li>
+                                    <li><a href="#">Lattafa</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Bản Tin</a></li>
+                            <li><a href="#">Mạng Xã Hội</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Tài Khoản</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Về Chúng Tôi</a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#">Người Dùng</a>
+                        <ul class="sub-menu">
+                            <li><a href="#">Đăng Nhập</a></li>
+                            <li><a href="#">Đăng Ký</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offcanvas_footer">
+                <span><a href="#"><i class="fa fa-envelope-0"></i>thom@gmail.com</a></span>
+                <ul>
+                    <li class="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li class="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li class="pinterest"><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+                    <li class="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    <li class="google-plus"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <header>
+        <div class="main_header header_transparent header-mobile-m">
+            <div class="header_container sticky-header">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="" alt=""></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- main-menu starts -->
+                            <div class="main_menu menu_two menu_position">
+                                <nav>
+                                    <ul>
+                                        <li>
+                                            <a href="index.html" class="active">Trang Chủ <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <ul class="sub_menu">
+                                                <li><a href="#">Nam</a></li>
+                                                <li><a href="#">Nữ</a></li>
+                                                <li><a href="#">Unisex</a></li>
+                                                <li><a href="#">Trẻ Em</a></li>
+                                            </ul>
+
+                                        </li>
+
+                                        <li class="mega_items">
+                                            <a href="#">Thương Hiệu <i class="fa fa-angle-down"></i></a>
+                                            <div class="mega_menu">
+                                                <ul class="mega_menu_inner">
+                                                    <li>
+                                                        <a href="#">Nam</a>
+                                                        <ul>
+                                                            <li><a href="products.html">Versace</a></li>
+                                                            <li><a href="products.html">Hugo Boss</a></li>
+                                                            <li><a href="products.html">Jaguar</a></li>
+                                                            <li><a href="products.html">Armani</a></li>
+                                                            <li><a href="products.html">Paco Rabbane</a></li>
+                                                            <li><a href="products.html">Ralph Lauren</a></li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Nữ</a>
+                                                        <ul>
+                                                            <li><a href="products.html">Bvlgari</a></li>
+                                                            <li><a href="products.html">Coach</a></li>
+                                                            <li><a href="#products.html">Kenzo</a></li>
+                                                            <li><a href="#products.html">D&G</a></li>
+                                                            <li><a href="#products.html">Jean Paul Gaultier</a></li>
+                                                        </ul>
+
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Unisex</a>
+                                                        <ul>
+                                                            <li><a href="#products.html">Ajmal</a></li>
+                                                            <li><a href="#products.html">Calvin Klein</a></li>
+                                                            <li><a href="#products.html">The Body Shop</a></li>
+                                                            <li><a href="#products.html">Lattafa</a></li>
+                                                        </ul>
+
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#">Blog <i class="fa fa-angle-down"></i></a>
+                                            <ul class="sub_menu pages">
+                                                <li><a href="#">Bản Tin</a></li>
+                                                <li><a href="#">Mạng Xã Hội</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Về Chúng Tôi</a></li>
+                                        <li><a href="#">Liên Hệ</a></li>
+                                        <li>
+                                            <a href="#">Người Dùng <i class="fa fa-angle-down"></i></a>
+                                            <ul class="sub_menu pages">
+                                                <li><a href="#">Đăng Nhập</a></li>
+                                                <li><a href="#">Đăng Ký</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+                            <!-- main menu ends -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="header_top_right">
+                                <div class="header_right_info">
+                                    <ul>
+                                        <li class="search_box">
+                                            <a href="javascript:void(0)">
+                                                <i class="fa fa-search"></i>
+                                            </a>
+                                            <div class="search_widget">
+                                                <form action="#">
+                                                    <input type="text" placeholder="Tìm Kiếm Nước Hoa ">
+                                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                                </form>
+                                            </div>
+                                        </li>
+                                        <li class="header_wishlist">
+                                            <a href="#">
+                                                <i class="fa fa-heart-o" id="wishlist-icon" data-quantity-wishlist="0"></i>
+                                                <span class="wishlist-quantity item_count">0</span>
+                                            </a>
+                                        </li>
+                                        <li class="mini_cart_wrapper">
+                                            <a href="cart.html">
+                                                <i class="fa fa-shopping-cart" id="cart-icon" data-quantity-cart="0"></i>
+                                                <span class="cart-quantity item_count">0</span>
+                                            </a>
+                                        </li>    
+                                            <!-- mini cart  -->
+                                            <div class="mini_cart mini_cart2">
+                                                <div class="cart_gallery">
+                                                    <div class="cart_item">
+                                                        <div class="cart_img">
+                                                            <a href="#"><img src=""
+                                                                    alt=""></a>
+                                                        </div>
+                                                        <div class="cart_info">
+                                                            <a href="#"></a>
+                                                            <p><span></span></p>
+                                                        </div>
+                                                        <div class="cart_remove">
+                                                            <a href="#"><i class="">  </i></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cart_item">
+                                                        <div class="cart_img">
+                                                            <a href="#"><img src=""
+                                                                    alt=""></a>
+                                                        </div>
+                                                        <div class="cart_info">
+                                                            <a href="#"></a>
+                                                            <p><span></span></p>
+                                                        </div>
+                                                        <div class="cart_remove">
+                                                            <a href="#"><i class=""></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mini_cart_table">
+                                                    <div class="cart_table_border">
+                                                        <div class="cart_total">
+                                                            <span>Sub Total :</span>
+                                                            <span class="price"></span>
+                                                        </div>
+
+                                                        <div class="cart_total mt-10">
+                                                            <span>Total :</span>
+                                                            <span class="price"></span>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="mini_cart_footer">
+                                                    <div class="cart_button">
+                                                        <a href="#">Xem Giỏ Hàng</a>
+                                                    </div>
+                                                    <div class="cart_button">
+                                                        <a href="#">Thanh Toán</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- mini cart ends -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="header_account">
+                                    <ul>
+                                        <li class="top_links">
+                                            <a href="#">
+                                                <i class="fa fa-cog"></i>
+                                            </a>
+                                            <ul class="dropdown_links">
+                                                <li><a href="#">Thanh Toán</a></li>
+                                                <li><a href="#">Tài Khoản</a></li>
+                                                <li><a href="#">Giỏ Hàng</a></li>
+                                                <li><a href="#">Yêu Thích</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="language">
+                                            <a href="#"><img src="images/icon/vietnamese.jpg" alt="English"> VN <i
+                                                    class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown_language">
+                                                <li><a href="#">Tiếng Việt</a></li>
+                                                <li><a href="#">English</a></li>
+                                                <li><a href="#">Korean</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="currency">
+                                            <a href="#">INR <i class="fa fa-angle-down"></i></a>
+                                            <ul class="dropdown_currency">
+                                                <li><a href="#">VND - Việt Nam Đồng</a></li>
+                                                <li><a href="#">USD - US Dollar</a></li>
+                                                <li><a href="#">WON - South Korean Won</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- slider section starts  -->
+    <section class="slider_section slider_section2 mb-66">
+        <div class="slider_area owl-carousel">
+            <div class="single_slider d-flex align-items-center" data-bgimg="images/slider/Thơm.png">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 offset-lg-6 col-md-6 offset-md-6">
+                            <div class="slider_content slider_content2 content_right">
+                                <h1>Bộ Sưu Tập Nước Hoa Nam</h1>
+                                <h2>Thơm Phức</h2>
+                                <p>Hương thơm phong phú của cây hương thảo và nerolu kết hợp với sự tinh tế của đậu tonka và gỗ trắng để tạo ra sự kết hợp hoàn hảo cho vẻ ngoài lịch lãm.</p>
+                                <a href="products.html" class="button">Mua Ngay <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="single_slider d-flex align-items-center" data-bgimg="images/slider/slider2.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7">
+                            <div class="slider_content slider_content2 content_left">
+                                <h1>Sự Kết Hợp</h1>
+                                <h2>Maison Micallef</h2>
+                                <p>Nước hoa này là một loại dược thảo tuyệt vời mang lại hương thơm của vani Bourbon thượng hạng và những hương thơm tinh tế của hoa nhài và hoa cẩm túc. Sự kết hợp đầy quyến rũ này gợi nhớ đến thiên đường nhiệt đới.</p>
+                                <a href="products.html" class="button">Mua Ngay <i class="fa fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+<!-- Checkout parts container -->
+<div class="checkout-container">
+    <!-- Part 1: Customer Information -->
+    <div class="checkout-part">
+        <h2 class="title_cus_infor" >Thông tin nhận hàng</h2>
+        <form action="process_order.php" method="post" class="text_info">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="name">Họ và tên:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Số điện thoại:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="address">Địa chỉ:</label>
+            <input type="text" id="address" name="address" required>
+            <label for="prefecture">Tỉnh Thành:</label>
+            <input type="text" id="prefecture" name="prefecture">
+            <label for="province">Quận huyện:</label>
+            <input type="text" id="province" name="province">
+            <label for="province">Phường xã:</label>
+            <input type="text" id="province" name="province">
+            <label for="note">Ghi chú:</label>
+            <textarea id="note" name="note"></textarea>
+        </form>
+    </div>
+
+    <!-- Part 2: Delivery Information -->
+    <div class="checkout-part">
+        <h2>Vận chuyển</h2>
+        <div>
+        <label for="standard">
+            <input type="radio" id="infrontdoor" name="leave" value="infrontdoor"> 
+            Giao hàng tận nơi
+        </label>
+         </div>
+        <div class="delivery-method">
+            <h2>Chọn phương thức vận chuyển:</h2>
+            <div class="radio-options">
+                <label for="standard">
+                    <input type="radio" id="standard" name="delivery-method" value="standard"> 
+                    Vận chuyển thông thường
+                </label>
+                <label for="expedited">
+                    <input type="radio" id="expedited" name="delivery-method" value="expedited"> 
+                    Vận chuyển hoả tốc
+                </label>
+            </div>
+        </div>
+        <h2>Thanh Toán:</h2>
+        <div class="payment-methods">
+            <label for="cod">
+                <input type="radio" id="cod" name="payment-method" value="cod"> 
+                Thanh toán khi nhận hàng (COD)
+            </label>
+            <label for="vn-pay">
+                <input type="radio" id="vn-pay" name="payment-method" value="vn-pay"> 
+                Thanh toán qua VN Pay-QR
+            </label>
+            <label for="momo">
+                <input type="radio" id="momo" name="payment-method" value="momo"> 
+                Thanh toán qua MoMo-QR
+            </label>
+        </div>
+    </div>
+    
+
+    <!-- Part 3: Checkout -->
+    <div class="checkout-part">
+<div class="container">
+    <h2 class="cart-s-title">Giỏ Hàng</h2>
+    <div class="cart-box">
+        <div class="cart-data">
+            <table id="cartItems"> 
+            </table>
+        </div>
+        <div class="cart-t">
+        <td> <div id="cartTotal"></div></td>
+            <tr>
+                <td colspan="2"><a href="checkout.html" class="checkout-btn">Thanh Toán</a></td>
+            </tr>
+        </div>
+    </div>
+    <div class="actions">
+        <a class="back-homepage" onclick="window.location.href='products.html'">Tiếp tục mua sắm</a>
+    </div>
+</div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+    <script src="countdown.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+    <script src="checkout.js"></script>
+    <script src="cart.js"></script>
+
+
+</body>
+
+</html>
